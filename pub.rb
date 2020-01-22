@@ -2,10 +2,11 @@ class Pub
 
 attr_reader :name,:till, :drunkenness_limit
 
-  def initialize(name,till,drinks)
+  def initialize(name,till,drinks, foods)
     @name = name
     @till = till
     @drinks=drinks
+    @foods=foods
     @drunkenness_limit=5
   end
 
@@ -29,13 +30,8 @@ attr_reader :name,:till, :drunkenness_limit
     end
   end
 
-
-
-
-
-
-
-
-
+  def sell_food(customer,food)
+    customer.wallet -= food.price
+  end
 
 end
