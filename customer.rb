@@ -17,4 +17,14 @@ class Customer
       return false
     end
   end
+
+  def buy_drink(pub, drink)
+    if customer_can_afford_drink?(drink)
+      take_from_wallet(drink.price)
+      pub.increase_till(drink.price)
+      pub.decrease_drinks(drink)
+    else
+      return "Sorry, you can't have a drink."
+    end
+  end
 end
