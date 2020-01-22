@@ -16,6 +16,10 @@ attr_reader :name,:till
     return @drinks.count
   end
 
+  def decrease_drinks(drink)
+    @drinks.delete(drink)
+  end
+
 
 
 
