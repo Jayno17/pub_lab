@@ -12,6 +12,10 @@ attr_reader :name,:till
     @till += amount
   end
 
+  def count_drinks
+    return @drinks.count
+  end
+
 
 
 

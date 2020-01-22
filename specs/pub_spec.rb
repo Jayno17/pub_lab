@@ -26,5 +26,14 @@ class TestPub <Minitest::Test
     assert_equal(1500,@pub.till)
   end
 
+  def test_count_drinks
+    assert_equal(2, @pub.count_drinks)
+  end
+
+  # def test_decrease_drinks
+  #   @pub.decrease_drinks(@drink1)
+  #   assert_equal(1, @pub.)
+  # end
+
 
 end
